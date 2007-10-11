@@ -8,7 +8,7 @@ Module StyleSheetRef
     ' StyleSheetRef:
     ' Author: Timothy Alosi (timalosi.com)
     ' Revision 0.1.B
-    ' Revision Date: November 20, 2004
+    ' Revision Date: October 10, 2007
     ' 
     ' This software is provided under the MIT License.
     ' Please see http://opensource.org/licenses/mit-license.php
