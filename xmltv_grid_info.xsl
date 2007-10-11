@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  version="1.1">
-    
+<!--
+    '===========================================================
+    ' xmltv_grid_info:
+    ' Author: Timothy Alosi (timalosi.com)
+    ' Revision 0.1.B
+    ' Revision Date: November 20, 2004
+    ' 
+    ' This software is provided under the MIT License.
+    ' Please see http://opensource.org/licenses/mit-license.php
+    ' for more information
+    '=========================================================== 
+-->
     <xsl:output method="html" />
     <!-- Main Template: Build the Framework of the Page -->
-	<!-- Sourceforge.NET Project xmltvtools             -->
+
     <xsl:template match="/">
         <html>
             <head>
