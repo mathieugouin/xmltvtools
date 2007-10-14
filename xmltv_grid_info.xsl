@@ -9,6 +9,9 @@
     ' 
 	'Copyright (c) 2004 Timothy Alosi
 	'
+	' This opensource project is hosted at http://xmltvtools.sourceforge.net
+	' Please contribute any improvements back to the project. 
+	'
 	'Permission is hereby granted, free of charge, to any person obtaining a copy
 	'of this software and associated documentation files (the "Software"), to deal
 	'in the Software without restriction, including without limitation the rights

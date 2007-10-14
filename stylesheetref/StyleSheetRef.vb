@@ -9,7 +9,10 @@ Module StyleSheetRef
     ' Author: Timothy Alosi (timalosi.com)
     ' Revision 0.1.B
     ' Revision Date: October 10, 2007
-    ' 
+    '
+	' This opensource project is hosted at http://xmltvtools.sourceforge.net
+	' Please contribute any improvements back to the project. 
+	'
 	'Copyright (c) 2007 Timothy Alosi
 	'
 	'Permission is hereby granted, free of charge, to any person obtaining a copy
