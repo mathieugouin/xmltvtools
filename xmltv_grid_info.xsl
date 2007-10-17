@@ -53,7 +53,7 @@
     <!-- Grab the Root Element and Build the Menu and Call the vaious page templates -->
     <xsl:template match="tv">
         <div ID="MenuDiv" class="menu popup_window">
-            <div ID="MenuTitle" class="popup_title">Listings for: <xsl:value-of select="substring(programme[1]/@stop, 5,2)"/>/<xsl:value-of select="substring(programme[1]/@stop,7,2)"/>/04</div>
+            <div ID="MenuTitle" class="popup_title">Listings for: <xsl:value-of select="substring(programme[1]/@stop, 5,2)"/>/<xsl:value-of select="substring(programme[1]/@stop,7,2)"/>/07</div>
             <div ID="MenuData" class="popup_data">
             	<span id="CurrentTime">Processing XML ...</span>
                 <p>
@@ -88,6 +88,7 @@
 					This data is copyrighted and provided for personal use only.</p>
 					<p>The listing data was gathered using <a href="http://www.xmltv.org">XMLTV.org</a> Listing grabber and parser.</p>
 					<p><font style="text-size:8pt; text-align:center;">Style Sheet Version 0.1b</font></p>
+					<p>This open source project hosted by <a href="http://sourceforge.net"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=206983&amp;type=2" width="125" height="37" border="0" alt="SourceForge.net Logo" /></a>
 					<center><a onclick="About()">Close Window</a></center>
 				</div>
 			</div>
