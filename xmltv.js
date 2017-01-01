@@ -128,56 +128,68 @@ function MenuDiv () {
 function showListings() {
     divTop = 10;
     divLeft = 25 + document.all['MenuDiv'].clientWidth;
-    //sStatus = '>';
+    var sStatus = '>';
+
     if (document.all['chkEarlyMorning'].checked) {
         document.all['EarlyMorning'].style.display = "";
         document.all['EarlyMorning'].style.top = divTop;
         document.all['EarlyMorning'].style.left = divLeft;
         divLeft += document.all['EarlyMorning'].clientWidth;
-        //sStatus = 'em.cw=' + document.all['EarlyMorning'].clientWidth;
+        sStatus = 'em.cw=' + document.all['EarlyMorning'].clientWidth;
     }
     else {
         //Hide the EarlyMorning Div
         document.all['EarlyMorning'].style.display = "none";
     }
+
     if (document.all['chkLateMorning'].checked) {
         document.all['LateMorning'].style.display = "";
         document.all['LateMorning'].style.top = divTop;
         document.all['LateMorning'].style.left = divLeft;
         divLeft += document.all['LateMorning'].clientWidth;
-        //sStatus = sStatus + ' lm.cw=' + document.all['LateMorning'].clientWidth;
+        sStatus = sStatus + ' lm.cw=' + document.all['LateMorning'].clientWidth;
     }
     else {
         //Hide the LateMorning Div
         document.all['LateMorning'].style.display = "none";
     }
+
     if (document.all['chkAfternoon'].checked) {
         document.all['Afternoon'].style.display = "";
         document.all['Afternoon'].style.top = divTop;
         document.all['Afternoon'].style.left = divLeft;
         divLeft += document.all['Afternoon'].clientWidth;
-        //sStatus = sStatus + ' af.cw=' + document.all['LateMorning'].clientWidth;
+        sStatus = sStatus + ' af.cw=' + document.all['LateMorning'].clientWidth;
     }
     else {
         //Hide the Afternoon Div
         document.all['Afternoon'].style.display = "none";
     }
+
     if (document.all['chkEvening'].checked) {
         document.all['Evening'].style.display = "";
         document.all['Evening'].style.top = divTop;
         document.all['Evening'].style.left = divLeft;
         divLeft += document.all['Evening'].clientWidth;
-        //sStatus = sStatus + ' ev.cw=' + document.all['Evening'].clientWidth;
+        sStatus = sStatus + ' ev.cw=' + document.all['Evening'].clientWidth;
     }
     else {
         //Hide the Evening Div
         document.all['Evening'].style.display = "none";
     }
+
+    // Debug:
     //window.status = sStatus;
+
     //Now Display the final Channel_Col Div
     document.all['Channel_Col'].style.display = "";
     document.all['Channel_Col'].style.top = divTop;
     document.all['Channel_Col'].style.left = divLeft;
+}
+
+function handleClick(cb) {
+    //window.alert(cb.checked);
+    showListings();
 }
 
 /*
@@ -229,6 +241,7 @@ function About(){
 
 
 function Test(){
+    window.alert("Test");
     window.status ='No Test Function';
 }
 

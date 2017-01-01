@@ -61,10 +61,10 @@
                 <span id="CurrentTime">Processing XML...</span>
                 <p>
                     <div>Click to Display</div>
-                    <div><input type="checkbox" class="small_checkbox" ID="chkEarlyMorning" value="ON" onpropertychange="showListings()"/>Early Morning</div>
-                    <div><input type="checkbox" class="small_checkbox" ID="chkLateMorning" value="ON" onpropertychange="showListings()"/>Late Morning</div>
-                    <div><input type="checkbox" class="small_checkbox" ID="chkAfternoon" value="ON" onpropertychange="showListings()"/>Afternoon</div>
-                    <div><input type="checkbox" class="small_checkbox" ID="chkEvening" value="ON" onpropertychange="showListings()"/>Evening</div>
+                    <div><label><input type="checkbox" class="small_checkbox" ID="chkEarlyMorning"  onclick='handleClick(this);'/>Early Morning</label></div>
+                    <div><label><input type="checkbox" class="small_checkbox" ID="chkLateMorning"   onclick='handleClick(this);'/>Late Morning</label></div>
+                    <div><label><input type="checkbox" class="small_checkbox" ID="chkAfternoon"     onclick='handleClick(this);'/>Afternoon</label></div>
+                    <div><label><input type="checkbox" class="small_checkbox" ID="chkEvening"       onclick='handleClick(this);'/>Evening</label></div>
                 </p>
                 <p>
                     <div>Color Codings</div>
