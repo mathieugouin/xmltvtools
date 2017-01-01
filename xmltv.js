@@ -7,26 +7,25 @@
 // This opensource project is hosted at http://xmltvtools.sourceforge.net
 // Please contribute any improvements back to the project.
 //
-//Copyright (c) 2007 Timothy Alosi
+// Copyright (c) 2007 Timothy Alosi
 //
-//Permission is hereby granted, free of charge, to any person obtaining a copy
-//of this software and associated documentation files (the "Software"), to deal
-//in the Software without restriction, including without limitation the rights
-//to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-//copies of the Software, and to permit persons to whom the Software is
-//furnished to do so, subject to the following conditions:
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
 //
-//The above copyright notice and this permission notice shall be included in
-//all copies or substantial portions of the Software.
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
 //
-//THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-//IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-//FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-//AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-//LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-//OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-//THE SOFTWARE.
-//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+// THE SOFTWARE.
 //===========================================================
 
 function SetUpPage() {
@@ -183,27 +182,39 @@ function showListings() {
     document.all['Channel_Col'].style.left = divLeft;
 }
 
-//function ChangeStyle(srcObject) {
-//  if (srcObject.className == 'child' {
-//      srcObject.className = 'child_hidden';
-//  }
-//  else {
-//      srcObject.className = 'child';
-//  }
-//}
+/*
+function ChangeStyle(srcObject) {
+    if (srcObject.className == 'child' {
+        srcObject.className = 'child_hidden';
+    }
+    else {
+        srcObject.className = 'child';
+    }
+}
+*/
 
+// Make sure number is 2 digits for clock display
+function formatDigits(value) {
+    var str = "";
+    if (value < 10) {
+        str = "0" + value.toString();
+    } else {
+        str = value.toString();
+    }
+    return str;
+}
+
+// This function actually displays the time.
 function showClock(){
-    // This function actually displays the time.
     dt = new Date();
     hours = dt.getHours();
     minutes = dt.getMinutes();
     seconds = dt.getSeconds();
-    document.all('CurrentTime').innerText = "Current Time " + hours + ":" + minutes + ":" + seconds;
+    document.all('CurrentTime').innerText = "Current Time " + formatDigits(hours) + ":" + formatDigits(minutes) + ":" + formatDigits(seconds);
     timerID = window.setTimeout("showClock()", 1000); // repeat call
 }
 
 function About(){
-
     if (document.all['AboutDiv'].style.display == "")
     {
         //Hide the About Dialog Box
