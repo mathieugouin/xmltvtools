@@ -43,7 +43,7 @@
                 <title>TV Listings</title>
                 <script type="text/javascript" language="JScript" src="xmltv.js"></script>
             </head>
-            <body bgcolor="#FFFFFF" onload="SetUpPage()" >
+            <body onload="SetUpPage();">
                 <xsl:apply-templates select="/tv"/>
             </body>
         </html>
@@ -52,9 +52,13 @@
     <!-- Grab the Root Element and Build the Menu and Call the various page templates -->
     <xsl:template match="tv">
         <div ID="MenuDiv" class="menu popup_window">
-            <div ID="MenuTitle" class="popup_title">Listings for: <xsl:value-of select="substring(programme[1]/@stop, 5,2)"/>/<xsl:value-of select="substring(programme[1]/@stop,7,2)"/>/07</div>
+            <div ID="MenuTitle" class="popup_title">Date: 
+                <xsl:value-of select="substring(programme[1]/@stop,1,4)"
+                />-<xsl:value-of select="substring(programme[1]/@stop,5,2)"
+                />-<xsl:value-of select="substring(programme[1]/@stop,7,2)"/>
+            </div>
             <div ID="MenuData" class="popup_data">
-                <span id="CurrentTime">Processing XML ...</span>
+                <span id="CurrentTime">Processing XML...</span>
                 <p>
                     Click to Display<br/>
                     <input type="checkbox" class="small_checkbox" ID="chkEarlyMorning" value="ON" onpropertychange="showListings()"/>Early Morning<br/>
@@ -62,7 +66,8 @@
                     <input type="checkbox" class="small_checkbox" ID="chkAfternoon" value="ON" onpropertychange="showListings()"/>Afternoon<br/>
                     <input type="checkbox" class="small_checkbox" ID="chkEvening" value="ON" onpropertychange="showListings()"/>Evening
                 </p>
-                <p>Color Codings
+                <p>
+                    Color Codings
                     <div class="mv">Movies</div>
                     <div class="sitco">SitComs, Series</div>
                     <div class="reali">Reality Shows</div>
@@ -74,9 +79,8 @@
                     <div class="drama">Drama, Action, etc</div>
                 </p>
 
-                    <!--<input type="submit" onclick="Test()" value="Run Test Script"/><br/>-->
-
-                    <center><a onclick="About()">About this Page</a></center>
+                <!--<input type="submit" onclick="Test()" value="Run Test Script"/><br/>-->
+                <center><a onclick="About()">About this Page</a></center>
             </div>
         </div>
 

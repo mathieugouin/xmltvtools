@@ -48,6 +48,11 @@ A:hover
     color: red;
 }
 
+body
+{
+    background-color: #ffffff;
+}
+
 span, div, th, td, font, h1, h2, h3, h4, p, body, small, input
 {
     font-family: Tahoma, Arial, MS Sans Serif;
