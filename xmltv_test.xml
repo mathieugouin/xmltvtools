@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="xmltv_grid_info.xsl" ?>
+
+<!DOCTYPE tv SYSTEM "xmltv.dtd">
+
+<tv source-info-url="http://tvschedule.zap2it.com/" source-info-name="zap2it.com" generator-info-name="zap2xml" generator-info-url="zap2xml@gmail.com">
+	<channel id="I45867.labs.zap2it.com">
+		<display-name>2.1 CBFTDT</display-name>
+		<display-name>2.1</display-name>
+		<display-name>CBFTDT</display-name>
+	</channel>
+	<channel id="I44991.labs.zap2it.com">
+		<display-name>3.1 WCAXDT</display-name>
+		<display-name>3.1</display-name>
+		<display-name>WCAXDT</display-name>
+	</channel>
+	<channel id="I53498.labs.zap2it.com">
+		<display-name>3.2 WCAXDT2</display-name>
+		<display-name>3.2</display-name>
+		<display-name>WCAXDT2</display-name>
+	</channel>
+	<channel id="I53502.labs.zap2it.com">
+		<display-name>6.1 CBMTDT</display-name>
+		<display-name>6.1</display-name>
+		<display-name>CBMTDT</display-name>
+	</channel>
+	<channel id="I72755.labs.zap2it.com">
+		<display-name>10.1 CFTMDT</display-name>
+		<display-name>10.1</display-name>
+		<display-name>CFTMDT</display-name>
+	</channel>
+	<channel id="I65995.labs.zap2it.com">
+		<display-name>12.1 CFCFDT</display-name>
+		<display-name>12.1</display-name>
+		<display-name>CFCFDT</display-name>
+	</channel>
+	<channel id="I73014.labs.zap2it.com">
+		<display-name>15.1 CKMIDT1</display-name>
+		<display-name>15.1</display-name>
+		<display-name>CKMIDT1</display-name>
+	</channel>
+	<channel id="I63040.labs.zap2it.com">
+		<display-name>17.1 CIVMDT</display-name>
+		<display-name>17.1</display-name>
+		<display-name>CIVMDT</display-name>
+	</channel>
+	<channel id="I58688.labs.zap2it.com">
+		<display-name>35.1 CFJPDT</display-name>
+		<display-name>35.1</display-name>
+		<display-name>CFJPDT</display-name>
+	</channel>
+	<channel id="I87652.labs.zap2it.com">
+		<display-name>47.1 CFHDDT</display-name>
+		<display-name>47.1</display-name>
+		<display-name>CFHDDT</display-name>
+	</channel>
+	<channel id="I44368.labs.zap2it.com">
+		<display-name>57.1 WCFEDT</display-name>
+		<display-name>57.1</display-name>
+		<display-name>WCFEDT</display-name>
+	</channel>
+	<channel id="I54298.labs.zap2it.com">
+		<display-name>57.2 WCFEDT2</display-name>
+		<display-name>57.2</display-name>
+		<display-name>WCFEDT2</display-name>
+	</channel>
+	<channel id="I58927.labs.zap2it.com">
+		<display-name>57.3 WCFEDT3</display-name>
+		<display-name>57.3</display-name>
+		<display-name>WCFEDT3</display-name>
+	</channel>
+	<channel id="I72895.labs.zap2it.com">
+		<display-name>62.1 CJNTDT</display-name>
+		<display-name>62.1</display-name>
+		<display-name>CJNTDT</display-name>
+	</channel>
+	<programme start="20161230223000 -0500" stop="20161231010000 -0500" channel="I45867.labs.zap2it.com">
+		<title lang="en">Tron: l&apos;héritage</title>
+		<sub-title lang="en">Movie (2010)</sub-title>
+		<desc lang="en">Sam, le fils du célèbre développeur de jeux vidéo Kevin Flynn, est hanté depuis longtemps par la disparition de son père. Sam finit par se retrouver dans le même cybermonde dans lequel son père est enfermé depuis 20 ans.</desc>
+		<date>2010</date>
+		<category lang="en">Movie / Drama</category>
+		<episode-num system="dd_progid">MV00343936.0000</episode-num>
+		<video>
+			<aspect>16:9</aspect>
+			<quality>HDTV</quality>
+		</video>
+		<subtitles type="teletext" />
+	</programme>
+	<programme start="20161231010000 -0500" stop="20161231030000 -0500" channel="I45867.labs.zap2it.com">
+		<title lang="en">Le Choc des Titans</title>
+		<sub-title lang="en">Movie (2010)</sub-title>
+		<desc lang="en">Perseus, fils de Zeus, se lance dans un voyage dangereux. En compagnie d&apos;une bande de guerriers, il lutte pour déjouer les plans maléfiques d&apos;Hadès qui visent à renverser le roi des Dieux et à ravager la Terre.</desc>
+		<date>2010</date>
+		<category lang="en">Movie / Drama</category>
+		<episode-num system="dd_progid">MV00277717.0000</episode-num>
+		<video>
+			<aspect>16:9</aspect>
+			<quality>HDTV</quality>
+		</video>
+		<subtitles type="teletext" />
+	</programme>
+	<programme start="20161231030000 -0500" stop="20161231060000 -0500" channel="I45867.labs.zap2it.com">
+		<title lang="en">SIGN OFF</title>
+		<desc lang="en">Sign off.</desc>
+		<episode-num system="dd_progid">SH00019112.0000</episode-num>
+		<previously-shown />
+	</programme>
+	<programme start="20161231060000 -0500" stop="20161231061500 -0500" channel="I45867.labs.zap2it.com">
+		<title lang="en">Benjamin et ses amis</title>
+		<desc lang="en">Benjamin la tortue relève des défis quotidiens tout en apprenant les leçons de la vie.</desc>
+		<category lang="en">Children's / Youth programmes</category>
+		<episode-num system="dd_progid">SH02582123.0000</episode-num>
+		<previously-shown />
+	</programme>
+	<programme start="20161231061500 -0500" stop="20161231070000 -0500" channel="I45867.labs.zap2it.com">
+		<title lang="en">Une aventure de Benjamin et ses amis - En route vers le Pôle Nord</title>
+		<desc lang="en">Benjamin reçoit une clef spéciale.</desc>
+		<category lang="en">Children's / Youth programmes</category>
+		<episode-num system="dd_progid">SH02582133.0000</episode-num>
+		<previously-shown />
+	</programme>
+	<programme start="20161231070000 -0500" stop="20161231080000 -0500" channel="I45867.labs.zap2it.com">
+		<title lang="en">Arthur L&apos;aventurier en Afrique</title>
+		<desc lang="en">La vie musicale de la Tanzanie.</desc>
+		<episode-num system="dd_progid">SH02327444.0000</episode-num>
+		<previously-shown />
+	</programme>
+	<programme start="20161231080000 -0500" stop="20161231083000 -0500" channel="I45867.labs.zap2it.com">
+		<title lang="en">Toc toc toc</title>
+		<desc lang="en">En compagnie de Youï et Alia, les petits font la découverte de mondes inconnus.</desc>
+		<episode-num system="dd_progid">SH00962114.0000</episode-num>
+		<previously-shown />
+	</programme>
+	<programme start="20161231083000 -0500" stop="20161231084500 -0500" channel="I45867.labs.zap2it.com">
+		<title lang="en">Organisation super insolite</title>
+		<desc lang="en">Les aventures de deux enfants agents qui travaillent pour un organisme gouvernemental.</desc>
+		<category lang="en">Children's / Youth programmes</category>
+		<episode-num system="dd_progid">SH02086048.0000</episode-num>
+		<previously-shown />
+	</programme>
+	<programme start="20161231084500 -0500" stop="20161231090000 -0500" channel="I45867.labs.zap2it.com">
+		<title lang="en">Sonic Boom</title>
+		<desc lang="en">Les aventures de Sonic le hérisson avec ses amis.</desc>
+		<category lang="en">Children's / Youth programmes</category>
+		<episode-num system="dd_progid">SH02155862.0000</episode-num>
+		<previously-shown />
+	</programme>
+	<programme start="20161231090000 -0500" stop="20161231101500 -0500" channel="I45867.labs.zap2it.com">
+		<title lang="en">La Flûte à six schtroumpfs</title>
+		<sub-title lang="en">Movie (1976)</sub-title>
+		<desc lang="en">Avec l&apos;aide de gentils lutins, un jeune chevalier combat les maléfices d&apos;un filou qui s&apos;est emparé d&apos;une Flûte enchantée. Dessin animé.</desc>
+		<date>1976</date>
+		<category lang="en">Movie / Drama</category>
+		<episode-num system="dd_progid">MV00029950.0000</episode-num>
+	</programme>
+	<programme start="20161231101500 -0500" stop="20161231110000 -0500" channel="I45867.labs.zap2it.com">
+		<title lang="en">Garfield: La révolte des rongeurs</title>
+		<desc lang="en">Ratzo, le méchant rat, entraîne son équipe de rongeurs dans une série de larcins. Lorsque la police découvre le butin caché dans l&apos;abri de son jardin, Jon est accusé. Garfield va devoir braver toutes les épreuves pour réussir à innocenter son ma</desc>
+		<category lang="en">Children's / Youth programmes</category>
+		<episode-num system="dd_progid">SH02582197.0000</episode-num>
+		<new />
+		<subtitles type="teletext" />
+	</programme>
+	<programme start="20161231110000 -0500" stop="20161231113000 -0500" channel="I45867.labs.zap2it.com">
+		<title lang="en">Ricardo</title>
+		<desc lang="en">Des recettes présentées et apprêtées avec simplicité et humour.</desc>
+		<episode-num system="dd_progid">SH01702682.0000</episode-num>
+		<video>
+			<aspect>16:9</aspect>
+			<quality>HDTV</quality>
+		</video>
+		<previously-shown />
+		<subtitles type="teletext" />
+	</programme>
+	<programme start="20161231113000 -0500" stop="20161231120000 -0500" channel="I45867.labs.zap2it.com">
+		<title lang="en">Ricardo</title>
+		<desc lang="en">Des recettes présentées et apprêtées avec simplicité et humour.</desc>
+		<episode-num system="dd_progid">SH01702682.0000</episode-num>
+		<video>
+			<aspect>16:9</aspect>
+			<quality>HDTV</quality>
+		</video>
+		<previously-shown />
+		<subtitles type="teletext" />
+	</programme>
+	<programme start="20161231120000 -0500" stop="20161231123000 -0500" channel="I45867.labs.zap2it.com">
+		<title lang="en">Le Téléjournal Midi</title>
+		<desc lang="en">Nouvelles nationales et internationales.</desc>
+		<category lang="en">News / Current affairs</category>
+		<episode-num system="dd_progid">SH00681969.0000</episode-num>
+		<video>
+			<aspect>16:9</aspect>
+			<quality>HDTV</quality>
+		</video>
+		<new />
+		<subtitles type="teletext" />
+	</programme>
+	<programme start="20161231123000 -0500" stop="20161231130000 -0500" channel="I45867.labs.zap2it.com">
+		<title lang="en">Mr. Bean</title>
+		<desc lang="en">Mr. Bean a le don de transformer la situation la plus anodine en aventure rocambolesque.</desc>
+		<episode-num system="dd_progid">SH00066508.0000</episode-num>
+		<previously-shown />
+	</programme>
+	<programme start="20161231130000 -0500" stop="20161231150000 -0500" channel="I45867.labs.zap2it.com">
+		<title lang="en">Alice au pays des merveilles</title>
+		<sub-title lang="en">Movie (2010)</sub-title>
+		<desc lang="en">Alice, désormais âgée de 19 ans, retourne dans le monde fantastique. Images réelles/dessin animé.</desc>
+		<date>2010</date>
+		<category lang="en">Movie / Drama</category>
+		<episode-num system="dd_progid">MV00276083.0000</episode-num>
+	</programme>
+	<programme start="20161231150000 -0500" stop="20161231160000 -0500" channel="I45867.labs.zap2it.com">
+		<title lang="en">Crescendo</title>
+		<sub-title lang="en">Finale</sub-title>
+		<category lang="en">Show / Game show</category>
+		<episode-num system="dd_progid">EP02547288.0006</episode-num>
+		<previously-shown />
+	</programme>
+	<programme start="20161231160000 -0500" stop="20161231170000 -0500" channel="I45867.labs.zap2it.com">
+		<title lang="en">Viens-tu faire un tour?</title>
+		<desc lang="en">Le chanteur Jean-François Breau aura l&apos;honneur de prendre le volant et de conduire Michel Barrette dans les rues de Chicoutimi.</desc>
+		<category lang="en">Show / Game show</category>
+		<episode-num system="dd_progid">EP01919814.0046</episode-num>
+		<previously-shown />
+	</programme>
+	<programme start="20161231170000 -0500" stop="20161231180000 -0500" channel="I45867.labs.zap2it.com">
+		<title lang="en">La semaine verte</title>
+		<sub-title lang="en">Trauma de brousse</sub-title>
+		<desc lang="en">Un dauphin voit sa vie transformée par une prothèse caudale. Un ours est libéré de la douleur par une chirurgie au cerveau.</desc>
+		<category lang="en">Show / Game show</category>
+		<episode-num system="dd_progid">EP00021161.0475</episode-num>
+		<video>
+			<aspect>16:9</aspect>
+			<quality>HDTV</quality>
+		</video>
+		<previously-shown />
+		<subtitles type="teletext" />
+	</programme>
+	<programme start="20161231180000 -0500" stop="20161231183000 -0500" channel="I45867.labs.zap2it.com">
+		<title lang="en">Le Téléjournal</title>
+		<desc lang="en">Revue des dernières nouvelles nationales et internationales, et les prévisions de la météo.</desc>
+		<category lang="en">News / Current affairs</category>
+		<episode-num system="dd_progid">SH01013425.0000</episode-num>
+		<video>
+			<aspect>16:9</aspect>
+			<quality>HDTV</quality>
+		</video>
+		<new />
+		<subtitles type="teletext" />
+	</programme>
+	<programme start="20161231183000 -0500" stop="20161231190000 -0500" channel="I45867.labs.zap2it.com">
+		<title lang="en">La petite vie</title>
+		<sub-title lang="en">Le rêve de Moman</sub-title>
+		<desc lang="en">À la suite des problèmes familiaux, Moman rêve d&apos;un voyage dans l&apos;espace.</desc>
+		<category lang="en">Show / Game show</category>
+		<episode-num system="dd_progid">EP01704417.0057</episode-num>
+		<previously-shown />
+	</programme>
+	<programme start="20161231190000 -0500" stop="20161231200000 -0500" channel="I45867.labs.zap2it.com">
+		<title lang="en">À l&apos;année prochaine</title>
+		<desc lang="en">La revue de l&apos;année qui fait du bruit.</desc>
+		<episode-num system="dd_progid">SH02582300.0000</episode-num>
+		<new />
+	</programme>
+	<programme start="20161231200000 -0500" stop="20161231213000 -0500" channel="I45867.labs.zap2it.com">
+		<title lang="en">En direct de l&apos;univers</title>
+		<sub-title lang="en">Spéciale du jour de l&apos;An</sub-title>
+		<desc lang="en">Émission spéciale à l&apos;occasion du jour de l&apos;An avec des variétés musicales. Invités: Serge Denoncourt, Jean-Michel Anctil, Julie Perreault et Ricardo Larrivée.</desc>
+		<date>20161231</date>
+		<category lang="en">Show / Game show</category>
+		<episode-num system="dd_progid">EP01702687.0108</episode-num>
+		<video>
+			<aspect>16:9</aspect>
+			<quality>HDTV</quality>
+		</video>
+		<new />
+		<subtitles type="teletext" />
+	</programme>
+	<programme start="20161231213000 -0500" stop="20161231220000 -0500" channel="I45867.labs.zap2it.com">
+		<title lang="en">Le Téléjournal</title>
+		<desc lang="en">Revue des dernières nouvelles nationales et internationales, et les prévisions de la météo.</desc>
+		<category lang="en">News / Current affairs</category>
+		<episode-num system="dd_progid">SH01013425.0000</episode-num>
+		<video>
+			<aspect>16:9</aspect>
+			<quality>HDTV</quality>
+		</video>
+		<new />
+		<subtitles type="teletext" />
+	</programme>
+	<programme start="20161231220000 -0500" stop="20161231230000 -0500" channel="I45867.labs.zap2it.com">
+		<title lang="en">Infoman 2016</title>
+		<desc lang="en">La dernière année sous le regard de Jean-René Dufort et son équipe.</desc>
+		<episode-num system="dd_progid">SH02582324.0000</episode-num>
+		<video>
+			<aspect>16:9</aspect>
+			<quality>HDTV</quality>
+		</video>
+		<new />
+	</programme>
+	<programme start="20161231230000 -0500" stop="20170101003000 -0500" channel="I45867.labs.zap2it.com">
+		<title lang="en">Bye Bye 2016</title>
+		<desc lang="en">Le grand spectacle plein de surprises et de moments inoubliables.</desc>
+		<episode-num system="dd_progid">SH02441922.0000</episode-num>
+		<video>
+			<aspect>16:9</aspect>
+			<quality>HDTV</quality>
+		</video>
+		<new />
+	</programme>
+	<programme start="20170101003000 -0500" stop="20170101013000 -0500" channel="I45867.labs.zap2it.com">
+		<title lang="en">Les coulisses du Bye Bye 2016</title>
+		<desc lang="en">Les multiples secrets de l&apos;émission Bye Bye 2016.</desc>
+		<episode-num system="dd_progid">SH02582362.0000</episode-num>
+		<video>
+			<aspect>16:9</aspect>
+			<quality>HDTV</quality>
+		</video>
+		<previously-shown />
+	</programme>
+	<programme start="20170101013000 -0500" stop="20170101033000 -0500" channel="I45867.labs.zap2it.com">
+		<title lang="en">Les Boys</title>
+		<sub-title lang="en">Movie (1997)</sub-title>
+		<desc lang="en">Ayant contracté une dette de jeu, l&apos;entraîneur d&apos;une équipe de hockey amateur risque de tout perdre si ses joueurs ne gagnent pas un ultime match.</desc>
+		<date>1997</date>
+		<category lang="en">Movie / Drama</category>
+		<episode-num system="dd_progid">MV00060235.0000</episode-num>
+	</programme>
+	<programme start="20170101033000 -0500" stop="20170101053000 -0500" channel="I45867.labs.zap2it.com">
+		<title lang="en">Le compte à rebours du 31 décembre</title>
+		<desc lang="en">Une équipe de journalistes fait état des célébrations dans tout le pays entourant le passage à l&apos;année marquant le 150e anniversaire de la Confédération canadienne.</desc>
+		<episode-num system="dd_progid">SH02581313.0000</episode-num>
+		<video>
+			<aspect>16:9</aspect>
+			<quality>HDTV</quality>
+		</video>
+		<new />
+	</programme>
+	<programme start="20170101053000 -0500" stop="20170101060000 -0500" channel="I45867.labs.zap2it.com">
+		<title lang="en">SIGN OFF</title>
+		<desc lang="en">Sign off.</desc>
+		<episode-num system="dd_progid">SH00019112.0000</episode-num>
+		<previously-shown />
+	</programme>
+	<programme start="20170101060000 -0500" stop="20170101061500 -0500" channel="I45867.labs.zap2it.com">
+		<title lang="en">Les aventures de Bakko et Gante</title>
+		<desc lang="en">Alexis cherche à comprendre le monde qui l&apos;entoure avec l&apos;aide de deux aventuriers galactiques.</desc>
+		<category lang="en">Children's / Youth programmes</category>
+		<episode-num system="dd_progid">SH02499078.0000</episode-num>
+		<previously-shown />
+	</programme>
+	<programme start="20170101061500 -0500" stop="20170101070000 -0500" channel="I45867.labs.zap2it.com">
+		<title lang="en">Benjamin et ses amis</title>
+		<sub-title lang="en">Voyage au fond des mers</sub-title>
+		<desc lang="en">Une aventure sous-marine inattendue.</desc>
+		<category lang="en">Children's / Youth programmes</category>
+		<category lang="en">Show / Game show</category>
+		<episode-num system="dd_progid">EP02582123.0001</episode-num>
+		<previously-shown />
+	</programme>
+	<programme start="20170101070000 -0500" stop="20170101080000 -0500" channel="I45867.labs.zap2it.com">
+		<title lang="en">Arthur L&apos;aventurier au Costa Rica</title>
+		<desc lang="en">Arthur L&apos;aventurier partage son expérience hors du commun au Costa Rica en relevant le défi du rallye d&apos;aventures.</desc>
+		<episode-num system="dd_progid">SH02582492.0000</episode-num>
+		<new />
+		<subtitles type="teletext" />
+	</programme>
+	<programme start="20170101080000 -0500" stop="20170101090000 -0500" channel="I45867.labs.zap2it.com">
+		<title lang="en">Organisation super insolite</title>
+		<desc lang="en">Les aventures de deux enfants agents qui travaillent pour un organisme gouvernemental.</desc>
+		<category lang="en">Children's / Youth programmes</category>
+		<episode-num system="dd_progid">SH02086048.0000</episode-num>
+		<previously-shown />
+	</programme>
+	<programme start="20170101090000 -0500" stop="20170101093000 -0500" channel="I45867.labs.zap2it.com">
+		<title lang="en">Pac-Man et les aventures de fantomes</title>
+		<desc lang="en">Pac-Man et ses amis doivent protéger le monde contre des esprits maléfiques.</desc>
+		<category lang="en">Children's / Youth programmes</category>
+		<episode-num system="dd_progid">SH02317053.0000</episode-num>
+		<previously-shown />
+	</programme>
+	<programme start="20170101093000 -0500" stop="20170101100000 -0500" channel="I45867.labs.zap2it.com">
+		<title lang="en">Histoire de jouets: hors du temps</title>
+		<desc lang="en">Peu de temps après Noël, Buzz, Woody et leurs amis se retrouvent sur un territoire inexploré où ils doivent faire face à une armée de Battlesaures délirants. Leur seul espoir de retourner dans la chambre de Bonnie repose alors sur Trixie.</desc>
+		<category lang="en">Children's / Youth programmes</category>
+		<episode-num system="dd_progid">SH02582508.0000</episode-num>
+		<previously-shown />
+	</programme>
+	<programme start="20170101100000 -0500" stop="20170101110000 -0500" channel="I45867.labs.zap2it.com">
+		<title lang="en">Le Jour du Seigneur</title>
+		<desc lang="en">Célébration religieuse.</desc>
+		<episode-num system="dd_progid">SH01702838.0000</episode-num>
+		<new />
+		<subtitles type="teletext" />
+	</programme>
+	<programme start="20170101110000 -0500" stop="20170101120000 -0500" channel="I45867.labs.zap2it.com">
+		<title lang="en">Découverte</title>
+		<date>20170101</date>
+		<category lang="en">Show / Game show</category>
+		<episode-num system="dd_progid">EP01702051.0177</episode-num>
+		<video>
+			<aspect>16:9</aspect>
+			<quality>HDTV</quality>
+		</video>
+		<new />
+		<subtitles type="teletext" />
+	</programme>
+	<programme start="20170101120000 -0500" stop="20170101123000 -0500" channel="I45867.labs.zap2it.com">
+		<title lang="en">Le Téléjournal Midi</title>
+		<desc lang="en">Nouvelles nationales et internationales.</desc>
+		<category lang="en">News / Current affairs</category>
+		<episode-num system="dd_progid">SH00681969.0000</episode-num>
+		<video>
+			<aspect>16:9</aspect>
+			<quality>HDTV</quality>
+		</video>
+		<new />
+		<subtitles type="teletext" />
+	</programme>
+	<programme start="20170101123000 -0500" stop="20170101133000 -0500" channel="I45867.labs.zap2it.com">
+		<title lang="en">La semaine verte</title>
+		<desc lang="en">Magazine consacré à l&apos;agriculture et aux ressources naturelles renouvelables.</desc>
+		<episode-num system="dd_progid">SH00021161.0000</episode-num>
+		<video>
+			<aspect>16:9</aspect>
+			<quality>HDTV</quality>
+		</video>
+		<previously-shown />
+		<subtitles type="teletext" />
+	</programme>
+	<programme start="20170101133000 -0500" stop="20170101140000 -0500" channel="I45867.labs.zap2it.com">
+		<title lang="en">Second Regard</title>
+		<date>20170101</date>
+		<category lang="en">Show / Game show</category>
+		<episode-num system="dd_progid">EP00021162.0350</episode-num>
+		<video>
+			<aspect>16:9</aspect>
+			<quality>HDTV</quality>
+		</video>
+		<new />
+		<subtitles type="teletext" />
+	</programme>
+	<programme start="20170101140000 -0500" stop="20170101150000 -0500" channel="I45867.labs.zap2it.com">
+		<title lang="en">Le nouveau show</title>
+		<sub-title lang="en">Les coulisses</sub-title>
+		<date>20170101</date>
+		<category lang="en">Show / Game show</category>
+		<episode-num system="dd_progid">EP02331703.0022</episode-num>
+		<new />
+	</programme>
+	<programme start="20170101150000 -0500" stop="20170101170000 -0500" channel="I45867.labs.zap2it.com">
+		<title lang="en">Les Incroyable</title>
+		<sub-title lang="en">Movie (2004)</sub-title>
+		<desc lang="en">Minés par l&apos;ennui dans leur banlieue, un ex-superhéros et sa famille trouvent l&apos;occasion de sauver le monde. Dessin animé.</desc>
+		<date>2004</date>
+		<category lang="en">Movie / Drama</category>
+		<episode-num system="dd_progid">MV00153266.0000</episode-num>
+	</programme>
+	<programme start="20170101170000 -0500" stop="20170101180000 -0500" channel="I45867.labs.zap2it.com">
+		<title lang="en">La revue culturelle 2016</title>
+		<desc lang="en">On revit en images plusieurs des bons moments de l&apos;année.</desc>
+		<episode-num system="dd_progid">SH02576510.0000</episode-num>
+		<video>
+			<aspect>16:9</aspect>
+			<quality>HDTV</quality>
+		</video>
+		<previously-shown />
+		<subtitles type="teletext" />
+	</programme>
+	<programme start="20170101180000 -0500" stop="20170101183000 -0500" channel="I45867.labs.zap2it.com">
+		<title lang="en">Le Téléjournal</title>
+		<desc lang="en">Revue des dernières nouvelles nationales et internationales, et les prévisions de la météo.</desc>
+		<category lang="en">News / Current affairs</category>
+		<episode-num system="dd_progid">SH01013425.0000</episode-num>
+		<video>
+			<aspect>16:9</aspect>
+			<quality>HDTV</quality>
+		</video>
+		<new />
+		<subtitles type="teletext" />
+	</programme>
+	<programme start="20170101183000 -0500" stop="20170101200000 -0500" channel="I45867.labs.zap2it.com">
+		<title lang="en">En direct de l&apos;univers</title>
+		<sub-title lang="en">Spéciale du jour de l&apos;An</sub-title>
+		<desc lang="en">Émission spéciale à l&apos;occasion du jour de l&apos;An avec des variétés musicales. Invités: Serge Denoncourt, Jean-Michel Anctil, Julie Perreault et Ricardo Larrivée.</desc>
+		<date>20161231</date>
+		<category lang="en">Show / Game show</category>
+		<episode-num system="dd_progid">EP01702687.0108</episode-num>
+		<video>
+			<aspect>16:9</aspect>
+			<quality>HDTV</quality>
+		</video>
+		<previously-shown start="20161231000000" />
+		<subtitles type="teletext" />
+	</programme>
+</tv>
