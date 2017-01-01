@@ -67,7 +67,7 @@
                     <div><input type="checkbox" class="small_checkbox" ID="chkEvening" value="ON" onpropertychange="showListings()"/>Evening</div>
                 </p>
                 <p>
-                    Color Codings
+                    <div>Color Codings</div>
                     <div class="mv">Movies</div>
                     <div class="sitco">SitComs, Series</div>
                     <div class="reali">Reality Shows</div>
@@ -84,32 +84,30 @@
             </div>
         </div>
 
-            <div ID="AboutDiv" class="menu popup_window" style="display:none">
+        <div ID="AboutDiv" class="menu popup_window" style="display:none">
             <div ID="AboutTitle" class="popup_title" ><span ID="AboutClose" class="popup_close" onclick="About()">x</span>About Tim's TV Listings</div>
-                <div ID="AboutData" class="popup_data" >
-                    <p>Web page design and stylesheet construction by <a href="http://timalosi.com">TimAlosi.com</a></p>
-                    <p>Listing data from <a><xsl:attribute name="href"><xsl:value-of select="@source-info-url"/></xsl:attribute><xsl:value-of select="@source-info-url"/></a><br/>
-                    This data is copyrighted and provided for personal use only.</p>
-                    <p>The listing data was gathered using <a href="http://www.xmltv.org">XMLTV.org</a> Listing grabber and parser.</p>
-                    <p><font style="text-size:8pt; text-align:center;">Style Sheet Version 0.1b</font></p>
-                    <p>This open source project hosted by <a href="http://sourceforge.net"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=206983&amp;type=2" width="125" height="37" border="0" alt="SourceForge.net Logo" /></a></p>
-                    <center><a onclick="About()">Close Window</a></center>
-                </div>
+            <div ID="AboutData" class="popup_data" >
+                <p>Web page design and stylesheet construction by <a href="http://timalosi.com">TimAlosi.com</a></p>
+                <p>Listing data from <a><xsl:attribute name="href"><xsl:value-of select="@source-info-url"/></xsl:attribute><xsl:value-of select="@source-info-url"/></a><br/>
+                This data is copyrighted and provided for personal use only.</p>
+                <p>The listing data was gathered using <a href="http://www.xmltv.org">XMLTV.org</a> Listing grabber and parser.</p>
+                <p><font style="text-size:8pt; text-align:center;">Style Sheet Version 0.1b</font></p>
+                <center><a onclick="About()">Close Window</a></center>
             </div>
+        </div>
 
 
-            <div ID="message1"><center><h2>Processing Program Information ...</h2></center></div>
-            <xsl:apply-templates select="/tv/programme" mode="programme_info"/>
-            <div ID="message2" ><center><h2>Processing Early Morning Listings ...</h2></center></div>
-            <xsl:call-template name="EarlyMorning"/>
-            <div ID="message3" ><center><h2>Processing Late Morning Listings ...</h2></center></div>
-            <xsl:call-template name="LateMorning"/>
-            <div ID="message4"><center><h2>Processing Afternoon Listings ...</h2></center></div>
-            <xsl:call-template name="Afternoon"/>
-            <div ID="message5" ><center><h2>Processing Evening Listings ...</h2></center></div>
-            <xsl:call-template name="Evening"/>
-            <xsl:call-template name="Channel_Col"/>
-
+        <div ID="message1"><center><h2>Processing Program Information ...</h2></center></div>
+        <xsl:apply-templates select="/tv/programme" mode="programme_info"/>
+        <div ID="message2" ><center><h2>Processing Early Morning Listings ...</h2></center></div>
+        <xsl:call-template name="EarlyMorning"/>
+        <div ID="message3" ><center><h2>Processing Late Morning Listings ...</h2></center></div>
+        <xsl:call-template name="LateMorning"/>
+        <div ID="message4"><center><h2>Processing Afternoon Listings ...</h2></center></div>
+        <xsl:call-template name="Afternoon"/>
+        <div ID="message5" ><center><h2>Processing Evening Listings ...</h2></center></div>
+        <xsl:call-template name="Evening"/>
+        <xsl:call-template name="Channel_Col"/>
 
         <!--<p>Categories</p>
         <table>
@@ -117,8 +115,7 @@
             </xsl:apply-templates>
         </table>
         <p>End of the listing</p>-->
-    </xsl:template>
-
+    </xsl:template>  <!-- end match="tv" -->
 
     <xsl:template name="header">
         <xsl:param name="hour1"/>
@@ -127,7 +124,6 @@
         <xsl:param name="hour4"/>
         <xsl:param name="hour5"/>
         <xsl:param name="hour6"/>
-
             <tr>
                 <th colspan="3" class="listing header colspan3" style="background-color: #eee"><div class="listing colspan3" >Channel</div></th>
                 <th class="listing header colspan1"><div class="listing colspan1" style="background-color: #ccc"><xsl:value-of select="$hour1"/></div></th>
@@ -155,8 +151,7 @@
                 <th class="listing header colspan1"><div class="listing colspan1" style="background-color: #eee">:30</div></th>
                 <th class="listing header colspan1"><div class="listing colspan1" style="background-color: #eee">:45</div></th>
             </tr>
-    </xsl:template>
-
+    </xsl:template>  <!-- End of template name="header" -->
 
     <xsl:template name="EarlyMorning">
         <div ID="EarlyMorning" class="time_slice" style="display:none">
@@ -173,7 +168,6 @@
         </div>
     </xsl:template>
 
-
     <xsl:template name="LateMorning" >
         <div ID="LateMorning" class="time_slice" style="display:none">
             <table border="0" cellspacing="0" cellpadding="0"   class="listing">
@@ -188,7 +182,6 @@
             <xsl:apply-templates select="channel" mode="LateMorning"/></table>
         </div>
     </xsl:template>
-
 
     <xsl:template name="Afternoon">
         <div ID="Afternoon" class="time_slice" style="display:none" >
@@ -219,7 +212,6 @@
             <xsl:apply-templates select="channel" mode="Evening"/></table>
         </div>
     </xsl:template>
-
 
     <xsl:template name="Channel_Col">
         <div ID="Channel_Col" class="time_slice" style="display:none" >
@@ -265,7 +257,6 @@
             <xsl:apply-templates select="/tv/programme[@channel=$chanid][substring(@start,1,12) &lt; $end_time]" mode="Listings">
             <xsl:with-param name="timeslice_start" select="$start_time"/><xsl:with-param name="timeslice_end" select="$end_time"/></xsl:apply-templates>
         </tr>
-
     </xsl:template>
 
     <xsl:template match="channel" mode="LateMorning">
@@ -445,13 +436,13 @@
         <div class="popup_window" style="display:none; width:20em;">
             <xsl:attribute name="ID"><xsl:value-of select="episode-num"/><xsl:value-of select="@channel"/><xsl:value-of select="substring(@start,7,6)"/></xsl:attribute>
             <div class="popup_title">
-                <xsl:value-of select = "title"/>
+                <xsl:value-of select="title"/>
                 <br/>
                 <xsl:call-template name="time12">
                     <xsl:with-param name="value" select="@start"/>
                 </xsl:call-template>
                         to  <xsl:call-template name="time12"><xsl:with-param name="value" select="@stop"/></xsl:call-template>
-                </div>
+            </div>
             <div class="popup_data">
                 <xsl:if test="sub-title"><b><xsl:value-of select="sub-title"/></b><br/></xsl:if>
                 <xsl:if test="desc"><xsl:value-of select="desc"/><br/></xsl:if>
@@ -467,10 +458,10 @@
                         </td>
                     </tr>
                 </table>
-                </div>
+            </div>
         </div>
-
     </xsl:template>
+
     <!-- -->
     <xsl:template match="/tv/programme" mode="categories">
         <tr>
@@ -481,13 +472,15 @@
             </xsl:for-each>
         </tr>
     </xsl:template>
+
     <xsl:template match="category" >
         <tr>
             <xsl:for-each select="category">
-                <td class="programme">
+            <td class="programme">
                 <xsl:value-of select="."/>
             </td>
             </xsl:for-each>
         </tr>
     </xsl:template>
+
 </xsl:stylesheet>

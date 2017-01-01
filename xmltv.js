@@ -77,7 +77,6 @@ function ToolTip(targetDivId)
 
     if (document.all['AboutDiv'].style.display == "none")
     {
-
         if (document.all(targetDivId).style.display == "none")
         {
             popTop = 0;
@@ -106,7 +105,6 @@ function ToolTip(targetDivId)
             //document.all(targetDivId).style.left = event.offsetX + objSource.offsetParent.offsetLeft + document.all('listings').offsetLeft;
             //document.all(targetDivId).style.top = event.clientY;
             //document.all(targetDivId).style.left = event.clientX;
-
         }
         else
         {
