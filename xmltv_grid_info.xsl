@@ -42,7 +42,7 @@
                 <link rel="stylesheet" href="programme_categories.css" type="text/css" />
                 <title>TV Listings - XSL Transformation of XMLTV by TimAlosi.com</title>
 
-                <script language="JScript" src="xmltv.js"></script>
+                <script type="text/javascript" language="JScript" src="xmltv.js"></script>
 
             </head>
             <body bgcolor="#FFFFFF" onload="SetUpPage()" >
@@ -50,7 +50,8 @@
             </body>
         </html>
     </xsl:template>
-    <!-- Grab the Root Element and Build the Menu and Call the vaious page templates -->
+
+    <!-- Grab the Root Element and Build the Menu and Call the various page templates -->
     <xsl:template match="tv">
         <div ID="MenuDiv" class="menu popup_window">
             <div ID="MenuTitle" class="popup_title">Listings for: <xsl:value-of select="substring(programme[1]/@stop, 5,2)"/>/<xsl:value-of select="substring(programme[1]/@stop,7,2)"/>/07</div>
@@ -64,7 +65,6 @@
                     <input type="checkbox" class="small_checkbox" ID="chkEvening" value="ON" onpropertychange="showListings()"/>Evening
                 </p>
                 <p>Color Codings
-
                     <div class="mv">Movies</div>
                     <div class="sitco">SitComs, Series</div>
                     <div class="reali">Reality Shows</div>
