@@ -60,11 +60,11 @@
             <div ID="MenuData" class="popup_data">
                 <span id="CurrentTime">Processing XML...</span>
                 <p>
-                    Click to Display<br/>
-                    <input type="checkbox" class="small_checkbox" ID="chkEarlyMorning" value="ON" onpropertychange="showListings()"/>Early Morning<br/>
-                    <input type="checkbox" class="small_checkbox" ID="chkLateMorning" value="ON" onpropertychange="showListings()"/>Late Morning<br/>
-                    <input type="checkbox" class="small_checkbox" ID="chkAfternoon" value="ON" onpropertychange="showListings()"/>Afternoon<br/>
-                    <input type="checkbox" class="small_checkbox" ID="chkEvening" value="ON" onpropertychange="showListings()"/>Evening
+                    <div>Click to Display</div>
+                    <div><input type="checkbox" class="small_checkbox" ID="chkEarlyMorning" value="ON" onpropertychange="showListings()"/>Early Morning</div>
+                    <div><input type="checkbox" class="small_checkbox" ID="chkLateMorning" value="ON" onpropertychange="showListings()"/>Late Morning</div>
+                    <div><input type="checkbox" class="small_checkbox" ID="chkAfternoon" value="ON" onpropertychange="showListings()"/>Afternoon</div>
+                    <div><input type="checkbox" class="small_checkbox" ID="chkEvening" value="ON" onpropertychange="showListings()"/>Evening</div>
                 </p>
                 <p>
                     Color Codings
