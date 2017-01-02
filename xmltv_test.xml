@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- TBD MGouin:
 <?xml-stylesheet type="text/xsl" href="xmltv_grid_info.xsl" ?>
+-->
+<?xml-stylesheet type="text/xsl" href="xmltv_test.xsl" ?>
 
 <!DOCTYPE tv SYSTEM "xmltv.dtd">
 
