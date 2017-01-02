@@ -16,7 +16,8 @@
         </html>
     </xsl:template>
 
-    <!-- Grab the Root Element and Build the Menu and Call the various page templates -->
+    <!-- ******************************************************************************** -->
+    <!-- tv template (root element) -->
     <xsl:template match="tv">
         <h2>Template tv</h2>
         <xsl:apply-templates select="channel" />
@@ -25,6 +26,7 @@
 -->
     </xsl:template>  <!-- end match="tv" -->
 
+    <!-- ******************************************************************************** -->
     <xsl:template match="channel">
         <h3>Template channel :
         <xsl:value-of select="display-name[1]"/>
@@ -41,6 +43,7 @@
         </xsl:for-each>
     </xsl:template>
 
+    <!-- ******************************************************************************** -->
     <xsl:template match="programme">
         <h3>Template programme :
         <xsl:value-of select="title" />
@@ -68,9 +71,8 @@
 -->
     </xsl:template>
 
-
-<!-- ************************ TBD MGouin: Start old xslt -->
-
+    <!-- ******************************************************************************** -->
+    <!-- TBD MGouin: Start old xslt -->
     <xsl:template match="channel_bak" mode="EarlyMorning">
         <xsl:variable name="chanid" select="@id"/>
 
