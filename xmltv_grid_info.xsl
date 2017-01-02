@@ -466,7 +466,7 @@
     <xsl:template match="/tv/programme" mode="categories">
         <tr>
             <xsl:for-each select="category">
-                <td>
+            <td>
                 <xsl:value-of select="."/>
             </td>
             </xsl:for-each>

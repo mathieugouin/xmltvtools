@@ -67,7 +67,6 @@ function ExpandCollapseText(srcObject, targetDivId)
         srcObject.innerText = 'More...';
         document.all(targetDivId).style.display = "none";
     }
-
 }
 
 function ToolTip(targetDivId)
@@ -238,7 +237,6 @@ function About(){
         document.all['AboutDiv'].style.posLeft = document.body.scrollLeft + (document.body.clientWidth / 2) - (document.all['AboutDiv'].clientWidth / 2);
     }
 }
-
 
 function Test(){
     window.alert("Test");
