@@ -33,13 +33,15 @@
         </h3>
 
         <xsl:variable name="chanid" select="@id"/>
-        <div><xsl:value-of select="$chanid" /></div>
-
 <!-- TBD MGouin:
+        <div><xsl:value-of select="$chanid" /></div>
 -->
+
         <xsl:for-each select="/tv/programme[@channel=$chanid]">
             <xsl:sort select="@start"/>
             <div><xsl:value-of select="title"/></div>
+<!-- TBD MGouin:
+-->
         </xsl:for-each>
     </xsl:template>
 
