@@ -76,20 +76,13 @@
             </div>
         </div>
 
-<!-- TBD MGouin: Buggy for multiple days overlap
-        <xsl:variable name="start_time"><xsl:value-of select="substring(@start,1,10)"/><xsl:value-of select="format-number(round(number(substring(@start,11,2))* 100 div 60),'00')"/></xsl:variable>
-        <xsl:variable name="stop_time"><xsl:value-of select="substring(@stop,1,10)"/><xsl:value-of select="format-number(round(number(substring(@stop,11,2))* 100 div 60),'00')"/></xsl:variable>
-        <xsl:variable name="time_duration" select="($stop_time - $start_time) * 60 div 100"/>
-        <div><xsl:copy-of select="$start_time" /></div>
-        <div><xsl:copy-of select="$stop_time" /></div>
-        <div><xsl:copy-of select="$time_duration" /></div>
--->
     </xsl:template>
 
     <!-- ******************************************************************************** -->
     <xsl:template match="programme" mode="simple">
         <xsl:variable name="start_time" select="concat(substring(@start,9,2), ':', substring(@start,11,2))" />
-        <xsl:variable name="stop_time" select="concat(substring(@stop,9,2), ':', substring(@stop,11,2))" />
+        <xsl:variable name="stop_time"  select="concat(substring(@stop,9,2), ':', substring(@stop,11,2))" />
+        <xsl:variable name="start_date" select="substring(@start,1,8)" />
 
         <xsl:variable name="category_class">
             <xsl:call-template name="convert_category">
@@ -98,6 +91,7 @@
         </xsl:variable>
 
         <div class="{$category_class}">
+            <xsl:value-of select="$start_date" />
             [<xsl:value-of select="$start_time" />-<xsl:value-of select="$stop_time" />]
             <xsl:value-of select="title" />
         </div>
