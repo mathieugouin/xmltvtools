@@ -2,9 +2,10 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  version="1.1">
     <xsl:output method="html" />
 
-    <!-- TBD MGouin: Sorting keys -->
+    <!-- Sorting keys -->
     <xsl:key name="channel_key" match="programme" use="@channel"/>
     <xsl:key name="date_key" match="programme" use="substring(@start,1,8)"/>
+    <xsl:key name="channel_date_key" match="programme" use="concat(@channel, ',', substring(@start,1,8))"/>
 
     <!-- Main Template: Build the Framework of the Page -->
     <xsl:template match="/">
@@ -16,17 +17,21 @@
             </head>
             <body>
                 <h1>TV Listing</h1>
-                <xsl:apply-templates select="/tv"/>
+<!-- TBD MGouin:
+                <xsl:apply-templates select="/tv" mode="normal"/>
+-->
+                <xsl:apply-templates select="/tv" mode="key"/>
             </body>
         </html>
     </xsl:template>  <!-- end match="/" -->
 
     <!-- ******************************************************************************** -->
     <!-- tv template (root element) -->
-    <xsl:template match="tv">
-        <h2>Template tv</h2>
-        <xsl:apply-templates select="channel" mode="key" />
+    <xsl:template match="tv" mode="normal">
+        <h2>Template tv normal</h2>
+        <xsl:apply-templates select="channel" mode="full" />
 <!-- TBD MGouin:
+        <xsl:apply-templates select="channel" mode="key" />
         <xsl:apply-templates select="channel" mode="full" />
         <xsl:apply-templates select="channel" mode="simple" />
         <xsl:apply-templates select="programme" mode="simple" />
@@ -35,11 +40,31 @@
     </xsl:template>  <!-- end match="tv" -->
 
     <!-- ******************************************************************************** -->
+    <xsl:template match="tv" mode="key">
+        <h2>Template tv key</h2>
+        <xsl:apply-templates mode="channel_group" select="
+            programme[
+              generate-id()
+              =
+              generate-id(
+                key('channel_key', @channel)[1]
+              )
+            ]
+          ">
+<!-- TBD MGouin:
+            <xsl:sort select="@channel" data-type="text" />
+-->
+        </xsl:apply-templates>
+    </xsl:template>  <!-- end match="tv" -->
+
+    <!-- ******************************************************************************** -->
     <xsl:template match="channel" mode="key">
         <h3>
-            channel key: 
-            <xsl:value-of select="display-name[1]"/> | 
-            <xsl:value-of select="@id" />
+            channel key:
+            <xsl:value-of select="display-name[1]"/> |
+            <xsl:value-of select="@id" /> |
+            <xsl:value-of select="generate-id(.)" /> |
+            <xsl:value-of select="generate-id((key('channel_key', @id)[1]))" /> |
         </h3>
 
         <xsl:variable name="chanid" select="@id" />
@@ -52,7 +77,7 @@
     <!-- ******************************************************************************** -->
     <xsl:template match="channel" mode="full">
         <h3>
-            <xsl:value-of select="display-name[1]"/> | 
+            <xsl:value-of select="display-name[1]"/> |
             <xsl:value-of select="@id" />
         </h3>
 
@@ -69,7 +94,7 @@
     <!-- ******************************************************************************** -->
     <xsl:template match="channel" mode="simple">
         <h3>
-            <xsl:value-of select="display-name[1]"/> | 
+            <xsl:value-of select="display-name[1]"/> |
             <xsl:value-of select="@id" />
         </h3>
     </xsl:template>
@@ -81,7 +106,6 @@
                 <xsl:with-param name="value" select="category/text()"/>
             </xsl:call-template>
         </xsl:variable>
-
         <div class="{$category_class}">
             <h3>
             <xsl:value-of select="title" />
@@ -102,7 +126,6 @@
                 Ep: <xsl:value-of select="episode-num" />
             </div>
         </div>
-
     </xsl:template>
 
     <!-- ******************************************************************************** -->
@@ -125,23 +148,56 @@
     </xsl:template>
 
     <!-- ******************************************************************************** -->
-    <xsl:template match="programme" mode="key">
-        <div>
-            KEY: 
-        </div>
-        <!-- TBD MGouin: 
+    <xsl:template match="programme" mode="channel_group">
+        <xsl:variable name="chanid" select="@channel" />
+        <h3>
+            programme channel_group:
+            <xsl:value-of select="$chanid" /> |
+            <xsl:value-of select="/tv/channel[@id=$chanid]/display-name[1]" />
+        </h3>
+        <!-- TBD MGouin:
+        http://stackoverflow.com/questions/948218/xslt-3-level-grouping-on-attributes/955527
         http://www.jenitennison.com/xslt/grouping/muenchian.html
         -->
 
-	<xsl:for-each select="contact[count(. | key('contacts-by-surname', surname)[1]) = 1]">
-		<xsl:sort select="surname" />
-		<xsl:value-of select="surname" />,<br />
-		<xsl:for-each select="key('contacts-by-surname', surname)">
-			<xsl:sort select="forename" />
-			<xsl:value-of select="forename" /> (<xsl:value-of select="title" />)<br />
-		</xsl:for-each>
-	</xsl:for-each>
+        <xsl:apply-templates mode="date_group" select="
+          key('channel_key', @channel)[
+            generate-id()
+            =
+            generate-id(
+              key(
+                'channel_date_key',
+                concat(
+                    @channel,
+                    ',',
+                    substring(@start,1,8))
+              )[1]
+            )
+          ]
+        ">
+          <xsl:sort select="substring(@start,1,14)" data-type="number" />
+        </xsl:apply-templates>
+    </xsl:template>
 
+    <!-- ******************************************************************************** -->
+    <xsl:template match="programme" mode="date_group">
+        <xsl:variable name="start_date" select="concat(substring(@start,1,4), '-', substring(@start,5,2), '-', substring(@start,7,2))" />
+        <div>
+            programme date_group:
+            <xsl:value-of select="$start_date" /> |
+        </div>
+        <xsl:apply-templates mode="simple" select="
+          key(
+            'channel_date_key',
+            concat(
+                @channel,
+                ',',
+                substring(@start,1,8)
+            )
+          )
+          ">
+          <xsl:sort select="@start" data-type="text" />
+        </xsl:apply-templates>
 
     </xsl:template>
 
