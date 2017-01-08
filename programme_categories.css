@@ -84,8 +84,12 @@ span, div, th, td, font, h1, h2, h3, h4, p, body, small, input
 {
     background-color: #fff
 }
-.unknown
+.empty_category
 {
     background-color: #fff
+}
+.unknown
+{
+    background-color: #f00
 }
 

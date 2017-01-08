@@ -144,6 +144,9 @@
             programme simple: <xsl:value-of select="$start_date" />
             [<xsl:value-of select="$start_time" />-<xsl:value-of select="$stop_time" />]
             <xsl:value-of select="title" />
+<!-- TBD MGouin: 
+            | [<xsl:value-of select="category/text()" />]
+-->
         </div>
     </xsl:template>
 
@@ -208,27 +211,36 @@
     <!-- ******************************************************************************** -->
     <xsl:template name="convert_category">
         <xsl:param name="value" />
-        <xsl:variable name="apos" select='"&apos;"'/>
+
         <xsl:choose>
-            <xsl:when test="$value = concat('Children', $apos, 's / Youth programmes')">
-                child
-            </xsl:when>
-            <xsl:when test="$value = 'Movie / Drama'">
-                drama
-            </xsl:when>
-            <xsl:when test="$value = 'News / Current affairs'">
-                news
-            </xsl:when>
-            <xsl:when test="$value = 'Show / Game show'">
-                serie
-            </xsl:when>
-            <xsl:when test="$value = 'Sports'">
-                sport
+            <xsl:when test="$value != ''"> <!-- Category provided -->
+                <xsl:variable name="apos" select='"&apos;"'/>
+                <xsl:choose>
+                    <xsl:when test="$value = concat('Children', $apos, 's / Youth programmes')">
+                        child
+                    </xsl:when>
+                    <xsl:when test="$value = 'Movie / Drama'">
+                        drama
+                    </xsl:when>
+                    <xsl:when test="$value = 'News / Current affairs'">
+                        news
+                    </xsl:when>
+                    <xsl:when test="$value = 'Show / Game show'">
+                        serie
+                    </xsl:when>
+                    <xsl:when test="$value = 'Sports'">
+                        sport
+                    </xsl:when>
+                    <xsl:otherwise>
+                        unknown
+                    </xsl:otherwise>
+                </xsl:choose>
             </xsl:when>
             <xsl:otherwise>
-                unknown
+                empty_category
             </xsl:otherwise>
         </xsl:choose>
+
     </xsl:template>
 
 </xsl:stylesheet>
