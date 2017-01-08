@@ -152,7 +152,9 @@
         <xsl:variable name="chanid" select="@channel" />
         <h3>
             programme channel_group:
+<!-- TBD MGouin: 
             <xsl:value-of select="$chanid" /> |
+-->
             <xsl:value-of select="/tv/channel[@id=$chanid]/display-name[1]" />
         </h3>
         <!-- TBD MGouin:
@@ -182,10 +184,10 @@
     <!-- ******************************************************************************** -->
     <xsl:template match="programme" mode="date_group">
         <xsl:variable name="start_date" select="concat(substring(@start,1,4), '-', substring(@start,5,2), '-', substring(@start,7,2))" />
-        <div>
+        <h4>
             programme date_group:
-            <xsl:value-of select="$start_date" /> |
-        </div>
+            <xsl:value-of select="$start_date" />
+        </h4>
         <xsl:apply-templates mode="simple" select="
           key(
             'channel_date_key',
