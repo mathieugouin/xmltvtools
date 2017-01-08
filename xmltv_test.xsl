@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  version="1.1">
     <xsl:output method="html" />
+
+    <!-- TBD MGouin: Sorting keys -->
+    <xsl:key name="channel_key" match="programme" use="@channel"/>
+    <xsl:key name="date_key" match="programme" use="substring(@start,1,8)"/>
+
     <!-- Main Template: Build the Framework of the Page -->
     <xsl:template match="/">
         <html>
@@ -14,30 +19,46 @@
                 <xsl:apply-templates select="/tv"/>
             </body>
         </html>
-    </xsl:template>
+    </xsl:template>  <!-- end match="/" -->
 
     <!-- ******************************************************************************** -->
     <!-- tv template (root element) -->
     <xsl:template match="tv">
         <h2>Template tv</h2>
-        <xsl:apply-templates select="channel" />
+        <xsl:apply-templates select="channel" mode="key" />
 <!-- TBD MGouin:
+        <xsl:apply-templates select="channel" mode="full" />
+        <xsl:apply-templates select="channel" mode="simple" />
+        <xsl:apply-templates select="programme" mode="simple" />
         <xsl:apply-templates select="programme" mode="full" />
 -->
     </xsl:template>  <!-- end match="tv" -->
 
     <!-- ******************************************************************************** -->
-    <xsl:template match="channel">
-        <h3>Template channel :
-        <xsl:value-of select="display-name[1]"/>
+    <xsl:template match="channel" mode="key">
+        <h3>
+            channel key: 
+            <xsl:value-of select="display-name[1]"/> | 
+            <xsl:value-of select="@id" />
         </h3>
 
         <xsl:variable name="chanid" select="@id" />
-<!-- TBD MGouin:
-        <div><xsl:value-of select="$chanid" /></div>
--->
         <xsl:for-each select="/tv/programme[@channel=$chanid]">
-            <xsl:sort select="@start" />
+            <xsl:sort select="@start" data-type="text" order="ascending" />
+            <xsl:apply-templates select="." mode="simple" />
+        </xsl:for-each>
+    </xsl:template>
+
+    <!-- ******************************************************************************** -->
+    <xsl:template match="channel" mode="full">
+        <h3>
+            <xsl:value-of select="display-name[1]"/> | 
+            <xsl:value-of select="@id" />
+        </h3>
+
+        <xsl:variable name="chanid" select="@id" />
+        <xsl:for-each select="/tv/programme[@channel=$chanid]">
+            <xsl:sort select="@start" data-type="text" order="ascending" />
 <!-- TBD MGouin:
             <div><xsl:value-of select="title" /></div>
 -->
@@ -46,9 +67,15 @@
     </xsl:template>
 
     <!-- ******************************************************************************** -->
-    <xsl:template match="programme" mode="full">
-        Template programme :
+    <xsl:template match="channel" mode="simple">
+        <h3>
+            <xsl:value-of select="display-name[1]"/> | 
+            <xsl:value-of select="@id" />
+        </h3>
+    </xsl:template>
 
+    <!-- ******************************************************************************** -->
+    <xsl:template match="programme" mode="full">
         <xsl:variable name="category_class">
             <xsl:call-template name="convert_category">
                 <xsl:with-param name="value" select="category/text()"/>
@@ -82,7 +109,7 @@
     <xsl:template match="programme" mode="simple">
         <xsl:variable name="start_time" select="concat(substring(@start,9,2), ':', substring(@start,11,2))" />
         <xsl:variable name="stop_time"  select="concat(substring(@stop,9,2), ':', substring(@stop,11,2))" />
-        <xsl:variable name="start_date" select="substring(@start,1,8)" />
+        <xsl:variable name="start_date" select="concat(substring(@start,1,4), '-', substring(@start,5,2), '-', substring(@start,7,2))" />
 
         <xsl:variable name="category_class">
             <xsl:call-template name="convert_category">
@@ -91,21 +118,31 @@
         </xsl:variable>
 
         <div class="{$category_class}">
-            <xsl:value-of select="$start_date" />
+            programme simple: <xsl:value-of select="$start_date" />
             [<xsl:value-of select="$start_time" />-<xsl:value-of select="$stop_time" />]
             <xsl:value-of select="title" />
         </div>
-<!-- TBD MGouin:
+    </xsl:template>
+
+    <!-- ******************************************************************************** -->
+    <xsl:template match="programme" mode="key">
         <div>
-        [<xsl:value-of select="@start" />] to [<xsl:value-of select="@stop" />]
+            KEY: 
         </div>
-        <div>
-        Description: <xsl:value-of select="desc" />
-        </div>
-        <div>
-        Ep: <xsl:value-of select="episode-num" />
-        </div>
--->
+        <!-- TBD MGouin: 
+        http://www.jenitennison.com/xslt/grouping/muenchian.html
+        -->
+
+	<xsl:for-each select="contact[count(. | key('contacts-by-surname', surname)[1]) = 1]">
+		<xsl:sort select="surname" />
+		<xsl:value-of select="surname" />,<br />
+		<xsl:for-each select="key('contacts-by-surname', surname)">
+			<xsl:sort select="forename" />
+			<xsl:value-of select="forename" /> (<xsl:value-of select="title" />)<br />
+		</xsl:for-each>
+	</xsl:for-each>
+
+
     </xsl:template>
 
     <!-- ******************************************************************************** -->
