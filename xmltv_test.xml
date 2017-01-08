@@ -77,19 +77,6 @@
 		<display-name>62.1</display-name>
 		<display-name>CJNTDT</display-name>
 	</channel>
-	<programme start="20161231061500 -0500" stop="20161231070000 -0500" channel="I45867.labs.zap2it.com">
-		<title lang="en">Une aventure de Benjamin et ses amis - En route vers le Pôle Nord</title>
-		<desc lang="en">Benjamin reçoit une clef spéciale.</desc>
-		<category lang="en">Children's / Youth programmes</category>
-		<episode-num system="dd_progid">SH02582133.0000</episode-num>
-		<previously-shown />
-	</programme>
-	<programme start="20161231070000 -0500" stop="20161231080000 -0500" channel="I45867.labs.zap2it.com">
-		<title lang="en">Arthur L&apos;aventurier en Afrique</title>
-		<desc lang="en">La vie musicale de la Tanzanie.</desc>
-		<episode-num system="dd_progid">SH02327444.0000</episode-num>
-		<previously-shown />
-	</programme>
 	<programme start="20161231080000 -0500" stop="20161231083000 -0500" channel="I45867.labs.zap2it.com">
 		<title lang="en">Toc toc toc</title>
 		<desc lang="en">En compagnie de Youï et Alia, les petits font la découverte de mondes inconnus.</desc>
@@ -109,5 +96,129 @@
 		<category lang="en">Children's / Youth programmes</category>
 		<episode-num system="dd_progid">SH02155862.0000</episode-num>
 		<previously-shown />
+	</programme>
+	<programme start="20170101120000 -0500" stop="20170101123000 -0500" channel="I45867.labs.zap2it.com">
+		<title lang="en">Le Téléjournal Midi</title>
+		<desc lang="en">Nouvelles nationales et internationales.</desc>
+		<category lang="en">News / Current affairs</category>
+		<episode-num system="dd_progid">SH00681969.0000</episode-num>
+		<video>
+			<aspect>16:9</aspect>
+			<quality>HDTV</quality>
+		</video>
+		<new />
+		<subtitles type="teletext" />
+	</programme>
+	<programme start="20170101123000 -0500" stop="20170101133000 -0500" channel="I45867.labs.zap2it.com">
+		<title lang="en">La semaine verte</title>
+		<desc lang="en">Magazine consacré à l&apos;agriculture et aux ressources naturelles renouvelables.</desc>
+		<episode-num system="dd_progid">SH00021161.0000</episode-num>
+		<video>
+			<aspect>16:9</aspect>
+			<quality>HDTV</quality>
+		</video>
+		<previously-shown />
+		<subtitles type="teletext" />
+	</programme>
+	<programme start="20161231080000 -0500" stop="20161231100000 -0500" channel="I44991.labs.zap2it.com">
+		<title lang="en">CBS This Morning: Saturday</title>
+		<desc lang="en">Gallant performs; chef José Andrés.</desc>
+		<date>20161231</date>
+		<category lang="en">News / Current affairs</category>
+		<category lang="en">Show / Game show</category>
+		<episode-num system="dd_progid">EP01630663.0244</episode-num>
+		<video>
+			<aspect>16:9</aspect>
+			<quality>HDTV</quality>
+		</video>
+		<new />
+		<subtitles type="teletext" />
+	</programme>
+	<programme start="20161231100000 -0500" stop="20161231103000 -0500" channel="I44991.labs.zap2it.com">
+		<title lang="en">Lucky Dog</title>
+		<sub-title lang="en">Olive</sub-title>
+		<desc lang="en">A dog is trained for a court system.</desc>
+		<category lang="en">Show / Game show</category>
+		<episode-num system="dd_progid">EP01772950.0085</episode-num>
+		<video>
+			<aspect>16:9</aspect>
+			<quality>HDTV</quality>
+		</video>
+		<previously-shown />
+		<subtitles type="teletext" />
+	</programme>
+	<programme start="20170101063000 -0500" stop="20170101070000 -0500" channel="I44991.labs.zap2it.com">
+		<title lang="en">This Old House</title>
+		<sub-title lang="en">This Old House Barrington Project, Part 3 of 10</sub-title>
+		<desc lang="en">Installing windows using a copper pan.</desc>
+		<category lang="en">Show / Game show</category>
+		<episode-num system="dd_progid">EP00004444.0806</episode-num>
+		<previously-shown />
+	</programme>
+	<programme start="20170101070000 -0500" stop="20170101073000 -0500" channel="I44991.labs.zap2it.com">
+		<title lang="en">Hidden Heroes</title>
+		<sub-title lang="en">Creative Solutions</sub-title>
+		<desc lang="en">Large breed dogs help autistic kids.</desc>
+		<category lang="en">Show / Game show</category>
+		<episode-num system="dd_progid">EP02240460.0032</episode-num>
+		<video>
+			<aspect>16:9</aspect>
+			<quality>HDTV</quality>
+		</video>
+		<previously-shown />
+		<subtitles type="teletext" />
+	</programme>
+	<programme start="20170101063000 -0500" stop="20170101070000 -0500" channel="I53502.labs.zap2it.com">
+		<title lang="en">Super Why!</title>
+		<sub-title lang="en">Judith&apos;s Happy Chanukah</sub-title>
+		<desc lang="en">The Super Readers learn about Hanukkah.</desc>
+		<category lang="en">Children's / Youth programmes</category>
+		<category lang="en">Show / Game show</category>
+		<episode-num system="dd_progid">EP00948827.0097</episode-num>
+		<video>
+			<aspect>16:9</aspect>
+			<quality>HDTV</quality>
+		</video>
+		<previously-shown />
+		<subtitles type="teletext" />
+	</programme>
+	<programme start="20170101200000 -0500" stop="20170101210000 -0500" channel="I53502.labs.zap2it.com">
+		<title lang="en">Adele Live in New York City</title>
+		<desc lang="en">Adele performs in New York.</desc>
+		<episode-num system="dd_progid">SH02412129.0000</episode-num>
+		<video>
+			<aspect>16:9</aspect>
+			<quality>HDTV</quality>
+		</video>
+		<new />
+		<subtitles type="teletext" />
+	</programme>
+	<programme start="20170102073000 -0500" stop="20170102074500 -0500" channel="I53502.labs.zap2it.com">
+		<title lang="en">The Moblees</title>
+		<sub-title lang="en">Jumpalooza</sub-title>
+		<desc lang="en">Gisbert invents a device.</desc>
+		<category lang="en">Children's / Youth programmes</category>
+		<category lang="en">Show / Game show</category>
+		<episode-num system="dd_progid">EP02083308.0040</episode-num>
+		<video>
+			<aspect>16:9</aspect>
+			<quality>HDTV</quality>
+		</video>
+		<previously-shown />
+		<subtitles type="teletext" />
+	</programme>
+	<programme start="20170103081500 -0500" stop="20170103082500 -0500" channel="I53502.labs.zap2it.com">
+		<title lang="en">Arthur</title>
+		<desc lang="en">George breaks the class&apos; project.</desc>
+		<date>20170103</date>
+		<category lang="en">Children's / Youth programmes</category>
+		<category lang="en">Show / Game show</category>
+		<episode-num system="dd_progid">EP00044107.0811</episode-num>
+		<video>
+			<aspect>16:9</aspect>
+			<quality>HDTV</quality>
+		</video>
+		<new />
+		<subtitles type="teletext" />
 	</programme>
 </tv>
