@@ -77,12 +77,6 @@
 		<display-name>62.1</display-name>
 		<display-name>CJNTDT</display-name>
 	</channel>
-	<programme start="20161231080000 -0500" stop="20161231083000 -0500" channel="I45867.labs.zap2it.com">
-		<title lang="en">Toc toc toc</title>
-		<desc lang="en">En compagnie de Youï et Alia, les petits font la découverte de mondes inconnus.</desc>
-		<episode-num system="dd_progid">SH00962114.0000</episode-num>
-		<previously-shown />
-	</programme>
 	<programme start="20161231083000 -0500" stop="20161231084500 -0500" channel="I45867.labs.zap2it.com">
 		<title lang="en">Organisation super insolite</title>
 		<desc lang="en">Les aventures de deux enfants agents qui travaillent pour un organisme gouvernemental.</desc>
@@ -97,28 +91,11 @@
 		<episode-num system="dd_progid">SH02155862.0000</episode-num>
 		<previously-shown />
 	</programme>
-	<programme start="20170101120000 -0500" stop="20170101123000 -0500" channel="I45867.labs.zap2it.com">
-		<title lang="en">Le Téléjournal Midi</title>
-		<desc lang="en">Nouvelles nationales et internationales.</desc>
-		<category lang="en">News / Current affairs</category>
-		<episode-num system="dd_progid">SH00681969.0000</episode-num>
-		<video>
-			<aspect>16:9</aspect>
-			<quality>HDTV</quality>
-		</video>
-		<new />
-		<subtitles type="teletext" />
-	</programme>
-	<programme start="20170101123000 -0500" stop="20170101133000 -0500" channel="I45867.labs.zap2it.com">
-		<title lang="en">La semaine verte</title>
-		<desc lang="en">Magazine consacré à l&apos;agriculture et aux ressources naturelles renouvelables.</desc>
-		<episode-num system="dd_progid">SH00021161.0000</episode-num>
-		<video>
-			<aspect>16:9</aspect>
-			<quality>HDTV</quality>
-		</video>
+	<programme start="20161231080000 -0500" stop="20161231083000 -0500" channel="I45867.labs.zap2it.com">
+		<title lang="en">Toc toc toc</title>
+		<desc lang="en">En compagnie de Youï et Alia, les petits font la découverte de mondes inconnus.</desc>
+		<episode-num system="dd_progid">SH00962114.0000</episode-num>
 		<previously-shown />
-		<subtitles type="teletext" />
 	</programme>
 	<programme start="20161231080000 -0500" stop="20161231100000 -0500" channel="I44991.labs.zap2it.com">
 		<title lang="en">CBS This Morning: Saturday</title>
@@ -207,6 +184,18 @@
 		<previously-shown />
 		<subtitles type="teletext" />
 	</programme>
+	<programme start="20170101120000 -0500" stop="20170101123000 -0500" channel="I45867.labs.zap2it.com">
+		<title lang="en">Le Téléjournal Midi</title>
+		<desc lang="en">Nouvelles nationales et internationales.</desc>
+		<category lang="en">News / Current affairs</category>
+		<episode-num system="dd_progid">SH00681969.0000</episode-num>
+		<video>
+			<aspect>16:9</aspect>
+			<quality>HDTV</quality>
+		</video>
+		<new />
+		<subtitles type="teletext" />
+	</programme>
 	<programme start="20170103081500 -0500" stop="20170103082500 -0500" channel="I53502.labs.zap2it.com">
 		<title lang="en">Arthur</title>
 		<desc lang="en">George breaks the class&apos; project.</desc>
@@ -219,6 +208,17 @@
 			<quality>HDTV</quality>
 		</video>
 		<new />
+		<subtitles type="teletext" />
+	</programme>
+	<programme start="20170101123000 -0500" stop="20170101133000 -0500" channel="I45867.labs.zap2it.com">
+		<title lang="en">La semaine verte</title>
+		<desc lang="en">Magazine consacré à l&apos;agriculture et aux ressources naturelles renouvelables.</desc>
+		<episode-num system="dd_progid">SH00021161.0000</episode-num>
+		<video>
+			<aspect>16:9</aspect>
+			<quality>HDTV</quality>
+		</video>
+		<previously-shown />
 		<subtitles type="teletext" />
 	</programme>
 </tv>
