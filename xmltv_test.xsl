@@ -40,19 +40,18 @@
     <!-- ******************************************************************************** -->
     <xsl:template match="tv" mode="key">
         <h2>Template tv key</h2>
-        <xsl:apply-templates mode="channel_group" select="
-            programme[
-              generate-id()
-              =
-              generate-id(
-                key('channel_key', @channel)[1]
-              )
-            ]
-          ">
-<!-- TBD MGouin:
-            <xsl:sort select="@channel" data-type="text" />
--->
-        </xsl:apply-templates>
+        <ul>
+            <xsl:apply-templates mode="channel_group" select="
+                programme[
+                  generate-id()
+                  =
+                  generate-id(
+                    key('channel_key', @channel)[1]
+                  )
+                ]
+              ">
+            </xsl:apply-templates>
+        </ul>
     </xsl:template>  <!-- end match="tv" -->
 
     <!-- ******************************************************************************** -->
@@ -139,66 +138,71 @@
             </xsl:call-template>
         </xsl:variable>
 
-        <div class="{$category_class}">
-            [<xsl:value-of select="$start_time" />-<xsl:value-of select="$stop_time" />]
-            <xsl:value-of select="title" />
-        </div>
+        <li>
+            <div class="{$category_class}">
+                [<xsl:value-of select="$start_time" />-<xsl:value-of select="$stop_time" />]
+                <xsl:value-of select="title" />
+            </div>
+        </li>
     </xsl:template>
 
     <!-- ******************************************************************************** -->
     <xsl:template match="programme" mode="channel_group">
         <xsl:variable name="chanid" select="@channel" />
-        <h3>
+        <li>
             <xsl:value-of select="/tv/channel[@id=$chanid]/display-name[1]" />
-        </h3>
-        <!-- TBD MGouin:
-        http://stackoverflow.com/questions/948218/xslt-3-level-grouping-on-attributes/955527
-        http://www.jenitennison.com/xslt/grouping/muenchian.html
-        -->
+            <!-- TBD MGouin:
+            http://stackoverflow.com/questions/948218/xslt-3-level-grouping-on-attributes/955527
+            http://www.jenitennison.com/xslt/grouping/muenchian.html
+            -->
 
-        <xsl:apply-templates mode="date_group" select="
-          key('channel_key', @channel)[
-            generate-id()
-            =
-            generate-id(
-              key(
-                'channel_date_key',
-                concat(
-                    @channel,
-                    ',',
-                    substring(@start,1,8))
-              )[1]
-            )
-          ]
-        ">
-          <xsl:sort select="substring(@start,1,14)" data-type="number" />
-        </xsl:apply-templates>
+            <ul>
+                <xsl:apply-templates mode="date_group" select="
+                  key('channel_key', @channel)[
+                    generate-id()
+                    =
+                    generate-id(
+                      key(
+                        'channel_date_key',
+                        concat(
+                            @channel,
+                            ',',
+                            substring(@start,1,8))
+                      )[1]
+                    )
+                  ]
+                ">
+                    <xsl:sort select="substring(@start,1,14)" data-type="number" />
+                </xsl:apply-templates>
+            </ul>
+        </li>
     </xsl:template>
 
     <!-- ******************************************************************************** -->
     <xsl:template match="programme" mode="date_group">
         <xsl:variable name="start_date" select="concat(substring(@start,1,4), '-', substring(@start,5,2), '-', substring(@start,7,2))" />
-        <h4>
+        <li>
             <xsl:value-of select="$start_date" />
-        </h4>
-        <xsl:apply-templates mode="simple_no_date" select="
-          key(
-            'channel_date_key',
-            concat(
-                @channel,
-                ',',
-                substring(@start,1,8)
-            )
-          )
-          ">
-          <xsl:sort select="@start" data-type="text" />
-        </xsl:apply-templates>
+            <ul>
+                <xsl:apply-templates mode="simple_no_date" select="
+                  key(
+                    'channel_date_key',
+                    concat(
+                        @channel,
+                        ',',
+                        substring(@start,1,8)
+                    )
+                  )
+                  ">
+                  <xsl:sort select="@start" data-type="text" />
+                </xsl:apply-templates>
+            </ul>
+        </li>
     </xsl:template>
 
     <!-- ******************************************************************************** -->
     <xsl:template name="convert_category">
         <xsl:param name="value" />
-
         <xsl:choose>
             <xsl:when test="$value != ''"> <!-- Category provided -->
                 <xsl:variable name="apos" select='"&apos;"'/>
@@ -227,7 +231,6 @@
                 empty_category
             </xsl:otherwise>
         </xsl:choose>
-
     </xsl:template>
 
 </xsl:stylesheet>
