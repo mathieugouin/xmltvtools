@@ -26,16 +26,14 @@
     </xsl:template>  <!-- end match="/" -->
 
     <!-- ******************************************************************************** -->
-    <!-- tv template (root element) -->
     <xsl:template match="tv" mode="normal">
         <h2>Template tv normal</h2>
         <xsl:apply-templates select="channel" mode="full" />
 <!-- TBD MGouin:
-        <xsl:apply-templates select="channel" mode="key" />
         <xsl:apply-templates select="channel" mode="full" />
         <xsl:apply-templates select="channel" mode="simple" />
-        <xsl:apply-templates select="programme" mode="simple" />
         <xsl:apply-templates select="programme" mode="full" />
+        <xsl:apply-templates select="programme" mode="simple" />
 -->
     </xsl:template>  <!-- end match="tv" -->
 
@@ -56,23 +54,6 @@
 -->
         </xsl:apply-templates>
     </xsl:template>  <!-- end match="tv" -->
-
-    <!-- ******************************************************************************** -->
-    <xsl:template match="channel" mode="key">
-        <h3>
-            channel key:
-            <xsl:value-of select="display-name[1]"/> |
-            <xsl:value-of select="@id" /> |
-            <xsl:value-of select="generate-id(.)" /> |
-            <xsl:value-of select="generate-id((key('channel_key', @id)[1]))" /> |
-        </h3>
-
-        <xsl:variable name="chanid" select="@id" />
-        <xsl:for-each select="/tv/programme[@channel=$chanid]">
-            <xsl:sort select="@start" data-type="text" order="ascending" />
-            <xsl:apply-templates select="." mode="simple" />
-        </xsl:for-each>
-    </xsl:template>
 
     <!-- ******************************************************************************** -->
     <xsl:template match="channel" mode="full">
@@ -144,9 +125,23 @@
             programme simple: <xsl:value-of select="$start_date" />
             [<xsl:value-of select="$start_time" />-<xsl:value-of select="$stop_time" />]
             <xsl:value-of select="title" />
-<!-- TBD MGouin: 
-            | [<xsl:value-of select="category/text()" />]
--->
+        </div>
+    </xsl:template>
+
+    <!-- ******************************************************************************** -->
+    <xsl:template match="programme" mode="simple_no_date">
+        <xsl:variable name="start_time" select="concat(substring(@start,9,2), ':', substring(@start,11,2))" />
+        <xsl:variable name="stop_time"  select="concat(substring(@stop,9,2), ':', substring(@stop,11,2))" />
+
+        <xsl:variable name="category_class">
+            <xsl:call-template name="convert_category">
+                <xsl:with-param name="value" select="category/text()"/>
+            </xsl:call-template>
+        </xsl:variable>
+
+        <div class="{$category_class}">
+            [<xsl:value-of select="$start_time" />-<xsl:value-of select="$stop_time" />]
+            <xsl:value-of select="title" />
         </div>
     </xsl:template>
 
@@ -154,10 +149,6 @@
     <xsl:template match="programme" mode="channel_group">
         <xsl:variable name="chanid" select="@channel" />
         <h3>
-<!-- TBD MGouin:
-            programme channel_group:
-            <xsl:value-of select="$chanid" /> |
--->
             <xsl:value-of select="/tv/channel[@id=$chanid]/display-name[1]" />
         </h3>
         <!-- TBD MGouin:
@@ -188,12 +179,9 @@
     <xsl:template match="programme" mode="date_group">
         <xsl:variable name="start_date" select="concat(substring(@start,1,4), '-', substring(@start,5,2), '-', substring(@start,7,2))" />
         <h4>
-<!-- TBD MGouin:
-            programme date_group:
--->
             <xsl:value-of select="$start_date" />
         </h4>
-        <xsl:apply-templates mode="simple" select="
+        <xsl:apply-templates mode="simple_no_date" select="
           key(
             'channel_date_key',
             concat(
@@ -205,7 +193,6 @@
           ">
           <xsl:sort select="@start" data-type="text" />
         </xsl:apply-templates>
-
     </xsl:template>
 
     <!-- ******************************************************************************** -->
