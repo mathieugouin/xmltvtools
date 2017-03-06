@@ -13,10 +13,13 @@
             <head>
                 <link rel="stylesheet" href="xmltv.css" type="text/css" />
                 <link rel="stylesheet" href="programme_categories.css" type="text/css" />
-                <title>TV Listings (TEST)</title>
+                <title>TV Listings</title>
             </head>
             <body>
                 <h1>TV Listing</h1>
+                <h2>Channel List</h2>
+                <xsl:apply-templates select="/tv/channel" mode="simple" />
+
 <!-- TBD MGouin:
                 <xsl:apply-templates select="/tv" mode="normal"/>
 -->
@@ -73,10 +76,10 @@
 
     <!-- ******************************************************************************** -->
     <xsl:template match="channel" mode="simple">
-        <h3>
+        <div>
             <xsl:value-of select="display-name[1]"/> |
             <xsl:value-of select="@id" />
-        </h3>
+        </div>
     </xsl:template>
 
     <!-- ******************************************************************************** -->
